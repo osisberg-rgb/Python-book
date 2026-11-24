@@ -56,38 +56,61 @@
 
 #6.8 
 
-pet = {
-    "Dog1": {
-        "name": "sox",
-        "age": "3",
-        "race": "greyhound",
-        "owner": {
-            "name": "max",
-            "street": "728 parkway drive"
-        }
+# pet = {
+#     "Dog1": {
+#         "name": "sox",
+#         "age": "3",
+#         "race": "greyhound",
+#         "owner": {
+#             "name": "max",
+#             "street": "728 parkway drive"
+#         }
+#     },
+#     "Dog2": {
+#         "name": "bantus",
+#         "age": "3",
+#         "race": "whippet",
+#         "owner": {
+#             "name": "oscar",
+#             "street": "Greve bygade 9"
+#         }
+#     },
+#     "Dog3": {
+#         "name": "cato",
+#         "age": "10",
+#         "race": "great dane",
+#         "owner": {
+#             "name": "lotte",
+#             "street": "rosenvejen 67"
+#         }
+#     }
+# }
+
+# for key, value in pet.items():
+#     doginfo = f"{value['name']}, {value['age'], {value['race']}}"
+#     owner = value['owner']
+#     ownerInfo = f"{owner['name']}, {owner['street']}"
+#     print(f"This is {key}, {value}, he is owned by {owner}")
+
+Cities = {
+    "New_York": {
+        "Country": "USA",
+        "Population": "5m",
+        "fact": "they have good bagels"
     },
-    "Dog2": {
-        "name": "bantus",
-        "age": "3",
-        "race": "whippet",
-        "owner": {
-            "name": "oscar",
-            "street": "Greve bygade 9"
-        }
+    "Greve": {
+        "Country": "Denmark",
+        "Population": "50.000",
+        "fact": "That is where i am from"
     },
-    "Dog3": {
-        "name": "cato",
-        "age": "10",
-        "race": "great dane",
-        "owner": {
-            "name": "lotte",
-            "street": "rosenvejen 67"
-        }
+    "Dallas": {
+        "Country": "USA",
+        "Population": "10m",
+        "fact": "They turned blue"
     }
 }
 
-for key, value in pet.items():
-    doginfo = f"{value['name']}, {value['age'], {value['race']}}"
-    owner = value['owner']
-    ownerInfo = f"{owner['name']}, {owner['street']}"
-    print(f"This is {key}, {value}, he is owned by {owner}")
+for key, value in Cities.items():
+    cityName = key
+    cityInfo = f"{cityName} is located in {value['Country']} it has a population of {value['Population']} and here is a fun fact: {value['fact']}"
+    print(f"{cityInfo}")
