@@ -27,29 +27,67 @@
 #     print(f"\n{name.title()}'s favorite language is {language.title()}.")
 
 
-#6.7
+# #6.7
 
-people = {
-    "roommate1": {
-        "first": "Oscar",
-        "last": "Isberg",
-        "age": "22"
+# people = {
+#     "roommate1": {
+#         "first": "Oscar",
+#         "last": "Isberg",
+#         "age": "22"
+#     },
+#     "roomate2": {
+#         "first": "Rian",
+#         "last": "Graham",
+#         "age": "20"
+#     },
+#     "roommate3": {
+#         "first": "max",
+#         "last": "hacther",
+#         "age": "20"
+#     }
+# }
+
+# for roommate, info in people.items():
+#     fullName = f"{info['first']} {info['last']}"
+#     age = f"{info['age']}"
+
+#     print(f"{roommate}: {fullName} and he is {age} years old")
+
+
+#6.8 
+
+pet = {
+    "Dog1": {
+        "name": "sox",
+        "age": "3",
+        "race": "greyhound",
+        "owner": {
+            "name": "max",
+            "street": "728 parkway drive"
+        }
     },
-    "roomate2": {
-        "first": "Rian",
-        "last": "Graham",
-        "age": "20"
+    "Dog2": {
+        "name": "bantus",
+        "age": "3",
+        "race": "whippet",
+        "owner": {
+            "name": "oscar",
+            "street": "Greve bygade 9"
+        }
     },
-    "roommate3": {
-        "first": "max",
-        "last": "hacther",
-        "age": "20"
+    "Dog3": {
+        "name": "cato",
+        "age": "10",
+        "race": "great dane",
+        "owner": {
+            "name": "lotte",
+            "street": "rosenvejen 67"
+        }
     }
 }
 
-for roommate, info in people.items():
-    fullName = f"{info['first']} {info['last']}"
-    age = f"{info['age']}"
-
-    print(f"{roommate}: {fullName} and he is {age} years old")
-    
+for key, value in pet.items():
+    doginfo = f"{value['name']}, {value['age'], {value['race']}}"
+    owner = value['owner']
+    ownerInfo = f"{owner['name']}, {owner['street']}"
+    print(f"This is {key}, {value}, he is owned by {owner}")
