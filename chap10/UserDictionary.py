@@ -21,4 +21,3 @@ def load_User():
     load = json.loads(loadContent)
     print(f"Hey {load['name']}, welcome back. You are {load['age']} years old")
 
-load_User()
