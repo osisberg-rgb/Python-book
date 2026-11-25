@@ -78,28 +78,28 @@
 
 
 
-#9.5 Login attempts
-class User:
-    def __init__(self, first_name, last_name):
-        self.first_name = first_name
-        self.last_name = last_name
-        self.login_attempts = 0
+# #9.5 Login attempts
+# class User:
+#     def __init__(self, first_name, last_name):
+#         self.first_name = first_name
+#         self.last_name = last_name
+#         self.login_attempts = 0
 
-    def describe_user(self):
-        print(f"Users name is {self.first_name} {self.last_name}")
+#     def describe_user(self):
+#         print(f"Users name is {self.first_name} {self.last_name}")
 
-    def greet_user(self): 
-        print(f"Hiii {self.first_name}, I hope you are going to enjoy the experience")
+#     def greet_user(self): 
+#         print(f"Hiii {self.first_name}, I hope you are going to enjoy the experience")
 
-    def incremt_login_attempts(self):
-        self.login_attempts += 1
+#     def incremt_login_attempts(self):
+#         self.login_attempts += 1
 
-    def reset_login_attempts(self):
-        self.login_attempts = 0
+#     def reset_login_attempts(self):
+#         self.login_attempts = 0
 
-use = User("Oscar", "Isberg")
+# use = User("Oscar", "Isberg")
 
-use.incremt_login_attempts()
-use.incremt_login_attempts()
-use.reset_login_attempts()
-print(use.login_attempts)
+# use.incremt_login_attempts()
+# use.incremt_login_attempts()
+# use.reset_login_attempts()
+# print(use.login_attempts)
