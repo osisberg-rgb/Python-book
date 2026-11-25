@@ -92,25 +92,26 @@
 #     ownerInfo = f"{owner['name']}, {owner['street']}"
 #     print(f"This is {key}, {value}, he is owned by {owner}")
 
-Cities = {
-    "New_York": {
-        "Country": "USA",
-        "Population": "5m",
-        "fact": "they have good bagels"
-    },
-    "Greve": {
-        "Country": "Denmark",
-        "Population": "50.000",
-        "fact": "That is where i am from"
-    },
-    "Dallas": {
-        "Country": "USA",
-        "Population": "10m",
-        "fact": "They turned blue"
-    }
-}
+#6.11
+# Cities = {
+#     "New_York": {
+#         "Country": "USA",
+#         "Population": "5m",
+#         "fact": "they have good bagels"
+#     },
+#     "Greve": {
+#         "Country": "Denmark",
+#         "Population": "50.000",
+#         "fact": "That is where i am from"
+#     },
+#     "Dallas": {
+#         "Country": "USA",
+#         "Population": "10m",
+#         "fact": "They turned blue"
+#     }
+# }
 
-for key, value in Cities.items():
-    cityName = key
-    cityInfo = f"{cityName} is located in {value['Country']} it has a population of {value['Population']} and here is a fun fact: {value['fact']}"
-    print(f"{cityInfo}")
+# for key, value in Cities.items():
+#     cityName = key
+#     cityInfo = f"{cityName} is located in {value['Country']} it has a population of {value['Population']} and here is a fun fact: {value['fact']}"
+#     print(f"{cityInfo}")
