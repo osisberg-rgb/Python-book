@@ -1,18 +1,45 @@
-#9.1
+# #9.1 make a restaurant class
 
-class Restaurant:
-    def __init__ (self, restaurant_name, cuisine_type):
-        self.restaurant_name = restaurant_name
-        self.cuisine_type = cuisine_type
+# class Restaurant:
+#     def __init__ (self, restaurant_name, cuisine_type):
+#         self.restaurant_name = restaurant_name
+#         self.cuisine_type = cuisine_type
 
-    def describe_restuarant(self):
-        print(f"The name of the restaurant is {self.restaurant_name}")
-        print(f"The cuisine type is {self.cuisine_type}")
+#     def describe_restuarant(self):
+#         print(f"The name of the restaurant is {self.restaurant_name}")
+#         print(f"The cuisine type is {self.cuisine_type}")
 
-    def open_restaurant(self):
-        print(f"{self.restaurant_name} is now open")
+#     def open_restaurant(self):
+#         print(f"{self.restaurant_name} is now open")
 
 
-res1 = Restaurant("Burger hytten", "American")
-res1.describe_restuarant()
-res1.open_restaurant()
+
+# #9.2 make 3 intances of a restaurant
+
+# res1 = Restaurant("Dennys", "American")
+# res1.describe_restuarant()
+
+# res2 = Restaurant("Jimmy jones", "Sandwich")
+# res2.describe_restuarant()
+
+# res3 = Restaurant("McD", "fast food")
+# res3.describe_restuarant()
+
+
+#9.3 make a user class
+
+class User:
+
+    def __init__(self, first_name, last_name):
+        self.first_name = first_name
+        self.last_name = last_name
+
+    def describe_user(self):
+        print(f"Users name is {self.first_name} {self.last_name}")
+
+    def greet_user(self): 
+        print(f"Hiii {self.first_name}, I hope you are going to enjoy the experience")
+
+user1 = User("Oscar", "Isberg")
+user1.describe_user()
+user1.greet_user()
