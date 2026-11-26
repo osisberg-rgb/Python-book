@@ -25,10 +25,10 @@ class Ship:
         self.screen.blit(self.image, self.rect)
 
     def update(self):
-        if self.movement_right == True:
+        if self.movement_right == True and self.x < 1140:
             self.x += self.settings.ship_speed
 
-        if self.movement_left == True:
+        if self.movement_left == True and self.x > 0:
             self.x -= self.settings.ship_speed
 
         self.rect.x = self.x
