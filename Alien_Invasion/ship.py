@@ -10,7 +10,13 @@ class Ship:
         self.image = pygame.transform.scale(self.image, (60, 60))
         self.rect = self.image.get_rect()
 
+        #Settings 
+        self.settings = ai_game.settings
+
         self.rect.midbottom = self.screen_rect.midbottom
+
+        #Store Float
+        self.x = float(self.rect.x)
 
         self.movement_right = False
         self.movement_left = False
@@ -20,8 +26,10 @@ class Ship:
 
     def update(self):
         if self.movement_right == True:
-            self.rect.x += 1
+            self.x += self.settings.ship_speed
 
         if self.movement_left == True:
-            self.rect.x -= 1
+            self.x -= self.settings.ship_speed
+
+        self.rect.x = self.x
 
