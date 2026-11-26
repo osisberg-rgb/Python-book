@@ -5,6 +5,7 @@ import sys
 class CheckEvent:
 
     def __init__(self, ai_game):
+        self.ai_game = ai_game
         self.ship = ai_game.ship
 
 
@@ -32,7 +33,8 @@ class CheckEvent:
             if event.key == pygame.K_DOWN:
                 self.ship.movement_down = True
 
-
+            if event.key == pygame.K_SPACE:
+                self.ai_game.fireBullet()
 
         #Relizing the keys
         elif event.type == pygame.KEYUP:
