@@ -12,6 +12,16 @@ class Ship:
 
         self.rect.midbottom = self.screen_rect.midbottom
 
+        self.movement_right = False
+        self.movement_left = False
+
     def blitme(self):
         self.screen.blit(self.image, self.rect)
+
+    def update(self):
+        if self.movement_right == True:
+            self.rect.x += 1
+
+        if self.movement_left == True:
+            self.rect.x -= 1
 
