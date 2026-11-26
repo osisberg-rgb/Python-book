@@ -17,12 +17,16 @@ class Ship:
 
         #Store Float
         self.x = float(self.rect.x)
+        self.y = float (self.rect.y)
 
         self.movement_right = False
         self.movement_left = False
+        self.movement_down = False
+        self.movement_up = False
 
     def blitme(self):
         self.screen.blit(self.image, self.rect)
+
 
     def update(self):
         if self.movement_right == True and self.x < 1140:
@@ -31,5 +35,12 @@ class Ship:
         if self.movement_left == True and self.x > 0:
             self.x -= self.settings.ship_speed
 
+        if self.movement_up == True and self.y > 500:
+            self.y -= self.settings.ship_speed
+
+        if self.movement_down == True and self.y <= 740:
+            self.y += self.settings.ship_speed
+
         self.rect.x = self.x
+        self.rect.y = self.y
 

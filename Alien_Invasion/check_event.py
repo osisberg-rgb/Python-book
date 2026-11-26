@@ -18,6 +18,7 @@ class CheckEvent:
             
 
     def key_movement(self, event):
+        #Pressing keys down
         if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_RIGHT:
                 self.ship.movement_right = True
@@ -25,11 +26,30 @@ class CheckEvent:
             if event.key == pygame.K_LEFT:
                 self.ship.movement_left = True
 
+            if event.key == pygame.K_UP:
+                self.ship.movement_up = True
 
+            if event.key == pygame.K_DOWN:
+                self.ship.movement_down = True
+
+
+
+        #Relizing the keys
         elif event.type == pygame.KEYUP:
+
+            #Right arrow
             if event.key == pygame.K_RIGHT:
                     self.ship.movement_right = False
 
+            #Left arrow
             if event.key == pygame.K_LEFT:
                 self.ship.movement_left = False
+
+            #Up arrown 
+            if event.key == pygame.K_UP:
+                self.ship.movement_up = False
+
+            #Down arrow
+            if event.key == pygame.K_DOWN:
+                self.ship.movement_down = False
 
