@@ -6,6 +6,7 @@ from settings import Settings
 from ship import Ship
 from check_event import CheckEvent
 from bullet import Bullet
+from alien import Alien
 
 
 
@@ -22,6 +23,10 @@ class AlienInvasion:
         self.ship = Ship(self)
 
         self.bullets = []
+
+        self.aliens = pygame.sprite.Group()
+
+        self._create_fleet()
 
         self.check_events = CheckEvent(self)
 
@@ -44,6 +49,7 @@ class AlienInvasion:
         #BackGround color
         self.screen.fill(self.settings.bg_color)
         self.ship.blitme()
+        self.aliens.draw(self.screen)
         for bullet in self.bullets[:]:
             if bullet.is_off_screen():
                 self.bullets.remove(bullet)
@@ -58,6 +64,15 @@ class AlienInvasion:
         if len(self.bullets) < self.settings.bullets_allowed:
             new_bullet = Bullet(self)
             self.bullets.append(new_bullet)
+
+
+    def _create_fleet(self):
+        start = 200
+        for range in (1, 10):
+            alien = Alien(self)
+            alien.rect.x = start
+            self.aliens.add(alien)
+            start += 50
 
 if __name__ == '__main__':
     ai = AlienInvasion()
