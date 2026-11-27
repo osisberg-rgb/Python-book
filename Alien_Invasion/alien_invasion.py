@@ -55,8 +55,9 @@ class AlienInvasion:
 
 
     def fireBullet(self):
-        new_bullet = Bullet(self)
-        self.bullets.append(new_bullet)
+        if len(self.bullets) < self.settings.bullets_allowed:
+            new_bullet = Bullet(self)
+            self.bullets.append(new_bullet)
 
 if __name__ == '__main__':
     ai = AlienInvasion()
