@@ -67,12 +67,19 @@ class AlienInvasion:
 
 
     def _create_fleet(self):
-        start = 200
-        for range in (1, 10):
-            alien = Alien(self)
-            alien.rect.x = start
-            self.aliens.add(alien)
-            start += 50
+
+        alien = Alien(self)
+        alien_witdth = alien.rect.width
+
+        current_x = alien_witdth
+
+        while current_x < (self.settings.screen_width - 2 * alien_witdth):
+            new_alien = Alien(self)
+            new_alien.x = current_x
+            new_alien.rect.x = current_x
+            self.aliens.add(new_alien)
+            current_x += 2 * alien_witdth
+
 
 if __name__ == '__main__':
     ai = AlienInvasion()
